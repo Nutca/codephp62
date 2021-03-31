@@ -11,6 +11,7 @@ $result = $myconn->query($strSQL);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <title>Document</title>
 </head>
 
@@ -32,8 +33,8 @@ $result = $myconn->query($strSQL);
                 <td><?php echo $row["id_user"] ?></td>
                 <td><?php echo $row["username"] ?></td>
                 <td><?php echo $row["status"] ?></td>
-                <td>Edit</td>
-                <td><a href="delete.php?id=<?php echo $row["id_user"] ?>">delete</a>></a></td>
+                <td><a href="update.php?id_user=<?= $row["id_user"]?>&username=<?= $row["username"]?>&status=<?= $row["status"] ?>">edit</a></a></td>
+                <td><a href="delete.php?id_user=<?php $row["id_user"] ?>"><i class="fas fa-trash-alt"></i></a></a></td>
             </tr>
         <?php
         }

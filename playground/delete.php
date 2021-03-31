@@ -17,7 +17,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
     }else {
         echo "id is null";
     }
-    
+}  
 
     // $frmPassword = $_POST["password"];
 
@@ -32,4 +32,4 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
     //         echo "ไม่สามารถเพิ่มข้อมูลได้";
     //     }
     // }
-    }
+    //}
