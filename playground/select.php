@@ -33,7 +33,7 @@ $result = $myconn->query($strSQL);
                 <td><?php echo $row["id_user"] ?></td>
                 <td><?php echo $row["username"] ?></td>
                 <td><?php echo $row["status"] ?></td>
-                <td><a href="update.php?id_user=<?= $row["id_user"]?>&username=<?= $row["username"]?>&status=<?= $row["status"] ?>">edit</a></a></td>
+                <td><a href="update.php?id_user=<?= $row["id_user"]?>&username=<?= $row["username"]?>&status=<?= $row["status"] ?>"><i class="fas fa-edit"></i></a></a></td>
                 <td><a href="delete.php?id_user=<?php $row["id_user"] ?>"><i class="fas fa-trash-alt"></i></a></a></td>
             </tr>
         <?php
