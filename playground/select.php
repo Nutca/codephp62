@@ -18,11 +18,11 @@ $result = $myconn->query($strSQL);
 <body>
     <table border="3" width="100%">
         <tr>
-            <td> ลำดับ</td>
-            <td> ชื่อผู้ใช้</td>
-            <td> สถานะ</td>
-            <td> เเก้ไข</td>
-            <td> ลบ</td>
+            <td> No.</td>
+            <td> Username</td>
+            <td> Status</td>
+            <td> Edit</td>
+            <td> Delete</td>
             
         </tr>
         <?php
