@@ -1,4 +1,5 @@
 <?php
+include 'template/header.html';
 require_once 'connectdb.php';
     
     if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -33,16 +34,10 @@ require_once 'connectdb.php';
     //    echo "2";
     //}
     ?>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=, initial-scale=1.0">
-        <title>Document</title>
-    </head>
+    
     <body>
-    <form action="insert.php" method="post">
+        <!-- <form action="insert.php" method="post">
+        
         <table border="2">
             <tr>
                 <td>username</td>
@@ -56,6 +51,24 @@ require_once 'connectdb.php';
                 <td colspan="2"><input type="submit" value="save"></td>
             </tr>
         </table>
-    </form>
+    </form> -->
+
+    <form action="insert.php" method="post">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+    <?php
+    include 'template/footer.html';
+    ?>
     </body>
     </html>

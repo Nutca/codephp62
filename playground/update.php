@@ -1,4 +1,5 @@
 <?php
+include 'template/header.html';
 require_once 'connectdb.php';
 $id_user = "";
 $username = "";
@@ -48,15 +49,8 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
     //    echo "2";
     //}
     ?>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
+    
+    <!-- <body>
     <form action="update.php?id_user=<?=$id_user?>" method="POST">
         <table border="2">
             <tr>
@@ -71,6 +65,25 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
                 <td colspan="2"><input type="submit" value="save"></td>
             </tr>
         </table>
-    </form>
+    </form> -->
+
+    <form action="update.php?id_user=<?=$id_user?>" method="POST">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Username</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username" value="<?=$username?>">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Status</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" name="status" value="<?=$status?>">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">SAVE</button>
+</form>
+
+    <?php
+    include 'template/footer.html';
+    ?>
     </body>
     </html>
+    
